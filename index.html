@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Antigravity Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <marquee scrollamount="10" bgcolor="#000000">HOUSE ALWAYS WINS... EXCEPT TODAY. *** ALL FUNDS GO TO BLACKJACK ***
+        HOUSE ALWAYS WINS... EXCEPT TODAY.</marquee>
+
+    <div class="main-container antigravity">
+        <div class="header-section">
+            <img src="coin.png" class="spinning-coin left">
+            <h1>Pre-Rich Community</h1>
+            <img src="coin.png" class="spinning-coin right">
+        </div>
+
+        <hr color="#00FF00">
+
+        <div class="content">
+            <p>The year is 1999 and we are Pre-Rich.</p>
+            <p>By 2026 we will still be Pre-Rich.</p>
+            <p>All creator fees will go towards prediction market gambling.</p>
+            <button class="win95-btn" style="margin-top: 20px;">Pre-Rich Community</button>
+        </div>
+
+        <hr color="#FFFF00">
+
+        <div class="footer">
+            <p>You are visitor number:</p>
+            <div class="hit-counter">077777</div>
+            <br>
+            <img src="netscape.png" alt="Best Viewed in Netscape" class="netscape-badge">
+            <p><small>Last updated: 1999</small></p>
+        </div>
+    </div>
+
+    <script>
+        // Hit Counter Logic
+        const counterElement = document.querySelector('.hit-counter');
+        let count = localStorage.getItem('page_visitors') || 77777;
+
+        function updateCounter() {
+            count++;
+            localStorage.setItem('page_visitors', count);
+            // Format with leading zeros to match the aesthetic (6 digits)
+            counterElement.innerText = count.toString().padStart(6, '0');
+        }
+
+        // Initial display
+        counterElement.innerText = count.toString().padStart(6, '0');
+
+        // Simulate new visitors every 1-5 seconds
+        setInterval(() => {
+            updateCounter();
+        }, Math.random() * 4000 + 1000);
+    </script>
+</body>
+
+</html>
