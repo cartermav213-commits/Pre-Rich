@@ -167,3 +167,49 @@ hr {
         font-size: 18px;
     }
 }
+
+.flying-coin {
+    width: 80px;
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    animation: erratic-flight 15s infinite linear;
+}
+
+@keyframes erratic-flight {
+    0% {
+        top: 10%;
+        left: -10%;
+        transform: rotate(0deg);
+    }
+
+    20% {
+        top: 30%;
+        left: 20%;
+        transform: rotate(10deg);
+    }
+
+    40% {
+        top: 10%;
+        left: 50%;
+        transform: rotate(-5deg);
+    }
+
+    60% {
+        top: 80%;
+        left: 80%;
+        transform: rotate(15deg);
+    }
+
+    80% {
+        top: 50%;
+        left: 40%;
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        top: 10%;
+        left: 110%;
+        transform: rotate(0deg);
+    }
+}
